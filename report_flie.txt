@@ -1,0 +1,224 @@
+AI Virtual Painter Using Hand Gesture Recognition
+1. Introduction
+
+The AI Virtual Painter is a computer vision-based application that allows users to draw on a virtual canvas using hand gestures. The project uses a webcam to capture live video and detects the position of the user’s hand using MediaPipe. The index finger is used as a virtual drawing pointer.
+
+When the user moves the index finger, the application draws a line on the screen. If the user raises both the index and middle fingers, the application switches to eraser mode. The user can also clear the complete canvas by pressing the C key and exit the application by pressing the Q key.
+
+This project demonstrates the practical use of Artificial Intelligence, Computer Vision, Image Processing, and Human-Computer Interaction.
+
+2. Objectives
+
+The main objectives of this project are:
+
+To develop a virtual painting application using Python.
+To detect hand gestures using a webcam.
+To use the index finger as a virtual drawing tool.
+To provide an eraser function using hand gestures.
+To allow users to draw without touching a physical device.
+To understand the working of computer vision and hand landmark detection.
+To create a simple and interactive human-computer interface.
+3. Technologies Used
+Python
+
+Python is the main programming language used to develop the project. It provides simple syntax and supports many libraries for Artificial Intelligence and Computer Vision.
+
+OpenCV
+
+OpenCV stands for Open Source Computer Vision Library. It is used for:
+
+Capturing video from the webcam.
+Displaying the video frames.
+Drawing lines and shapes.
+Processing images.
+Reading keyboard input.
+Creating the virtual canvas.
+MediaPipe
+
+MediaPipe is a framework developed for building machine learning applications. In this project, MediaPipe Hands is used to detect the user’s hand and identify important hand landmarks.
+
+It detects 21 points on a hand, including:
+
+Wrist
+Thumb
+Index finger
+Middle finger
+Ring finger
+Little finger
+NumPy
+
+NumPy is used to create and manage the blank canvas. It also supports numerical operations on image data.
+
+4. System Requirements
+Hardware Requirements
+Computer or laptop
+Webcam
+Minimum 4 GB RAM
+Keyboard
+Good lighting conditions
+Software Requirements
+Windows, Linux, or macOS
+Python 3.11
+OpenCV
+MediaPipe
+NumPy
+Visual Studio Code or any Python IDE
+5. Working Principle
+
+The project works by continuously capturing video from the webcam. Each video frame is processed by the MediaPipe hand detection model.
+
+The hand landmarks are detected and the coordinates of the index finger are obtained. Based on the position of the fingers, the application decides whether the user wants to draw or erase.
+
+The working process is as follows:
+
+The webcam captures the user’s hand.
+OpenCV reads the video frame.
+MediaPipe detects the hand.
+The hand landmarks are identified.
+The position of the index finger is calculated.
+The application checks the finger gesture.
+A line is drawn if drawing mode is selected.
+The line is removed or erased if eraser mode is selected.
+The final canvas is displayed on the screen.
+6. Hand Gesture Recognition
+
+The application uses finger positions to identify different actions.
+
+Drawing Gesture
+
+When only the index finger is raised, the application enters drawing mode.
+
+The position of the index finger is used as the drawing point. As the user moves the finger, the application connects the previous position and the current position with a line.
+
+Eraser Gesture
+
+When both the index finger and middle finger are raised, the application enters eraser mode.
+
+In this mode, the application draws using the background color. This makes it appear as though the existing drawing is being erased.
+
+Clear Canvas
+
+When the user presses the C key, the complete canvas is cleared.
+
+Exit Application
+
+When the user presses the Q key, the application closes.
+
+7. Hand Landmarks Used
+
+MediaPipe detects 21 hand landmarks. This project mainly uses the following landmarks:
+
+Landmark 8: Tip of the index finger
+Landmark 12: Tip of the middle finger
+Landmark 6: Lower joint of the index finger
+Landmark 10: Lower joint of the middle finger
+
+The application compares the positions of these landmarks to determine whether a finger is raised or lowered.
+
+For example:
+
+If the index finger is raised and the middle finger is lowered, drawing mode is selected.
+If both the index and middle fingers are raised, eraser mode is selected.
+8. Algorithm
+Start the application.
+Open the webcam.
+Create a blank virtual canvas.
+Capture a video frame.
+Convert the frame into RGB format.
+Detect the hand using MediaPipe.
+Find the required hand landmarks.
+Check the position of the index finger and middle finger.
+If only the index finger is raised, draw on the canvas.
+If the index and middle fingers are raised, erase the drawing.
+Display the canvas and webcam frame.
+Check for keyboard input.
+If C is pressed, clear the canvas.
+If Q is pressed, exit the application.
+Repeat the process until the user exits.
+9. Flow of the Project
+
+The project follows this flow:
+
+Start → Open Webcam → Capture Frame → Detect Hand → Identify Gesture → Draw or Erase → Display Output → Check Keyboard Input → Repeat or Exit
+
+10. Features
+
+The important features of the AI Virtual Painter are:
+
+Real-time hand detection.
+Touch-free drawing.
+Virtual canvas.
+Gesture-based drawing.
+Gesture-based erasing.
+Clear canvas option.
+Simple keyboard controls.
+Fast and interactive operation.
+Easy-to-use interface.
+No physical drawing device is required.
+11. Applications
+
+This project can be used in many areas, such as:
+
+Online teaching and digital whiteboards.
+Presentation systems.
+Touchless computer interaction.
+Educational applications.
+Interactive gaming.
+Smart classroom systems.
+Virtual drawing applications.
+Human-computer interaction research.
+Creative design systems.
+Accessibility-based interfaces.
+12. Advantages
+
+The advantages of this project are:
+
+It is easy to use.
+It does not require a touchscreen.
+It provides real-time interaction.
+It uses simple hand gestures.
+It reduces the need for physical input devices.
+It is low-cost because it only requires a webcam.
+It helps in understanding Artificial Intelligence and Computer Vision.
+It can be improved with additional features.
+13. Limitations
+
+The project has some limitations:
+
+It requires a working webcam.
+Poor lighting can affect hand detection.
+Background objects may reduce detection accuracy.
+Fast hand movements may cause broken lines.
+Only limited gestures are supported.
+It currently supports basic drawing and erasing.
+It may not work properly when the hand is outside the camera frame.
+The application may be affected by low camera quality.
+14. Future Enhancements
+
+The project can be improved by adding the following features:
+
+Different drawing colors.
+Different brush sizes.
+Shape drawing tools.
+Text writing using gestures.
+Save drawing as an image.
+Undo and redo options.
+Multiple-hand support.
+Voice commands.
+More advanced hand gestures.
+User interface buttons.
+Background image selection.
+Drawing history.
+15. Result
+
+The AI Virtual Painter successfully detects the user’s hand through a webcam and allows the user to draw on a virtual canvas using the index finger. The application also supports erasing through a two-finger gesture.
+
+The project provides a simple and interactive way to perform digital drawing without using a mouse, keyboard, or touchscreen.
+
+16. Conclusion
+
+The AI Virtual Painter is a useful application of Artificial Intelligence and Computer Vision. It demonstrates how hand gesture recognition can be used to control a computer application in real time.
+
+By combining Python, OpenCV, MediaPipe, and NumPy, the project creates a touch-free drawing system. The application improves understanding of webcam processing, hand landmark detection, gesture recognition, and image drawing operations.
+
+This project can be further developed into an advanced virtual whiteboard or gesture-controlled human-computer interaction system.
